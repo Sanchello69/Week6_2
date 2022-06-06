@@ -99,6 +99,7 @@ class TimerFragment : Fragment() {
 
                 isActive = false
                 seconds = 0
+                countColor = 0
             }
         }
     }
