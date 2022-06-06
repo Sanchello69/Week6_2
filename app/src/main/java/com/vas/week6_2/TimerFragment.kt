@@ -3,8 +3,6 @@ package com.vas.week6_2
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

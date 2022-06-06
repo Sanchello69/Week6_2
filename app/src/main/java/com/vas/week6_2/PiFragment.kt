@@ -1,9 +1,6 @@
 package com.vas.week6_2
 
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.os.Message
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -11,7 +8,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.vas.week6_2.databinding.FragmentPiBinding
 import kotlinx.coroutines.*
-import java.lang.Runnable
 import java.lang.Thread.sleep
 
 class PiFragment : Fragment() {
@@ -73,6 +69,12 @@ class PiFragment : Fragment() {
         counter = 0
         binding?.piTextView?.text = ""
     }
+
+    /**
+     * Код функции piSpigot взят из статьи
+     * "«Краник», или алгоритм для поиска цифр числа Пи"
+     * (https://habr.com/ru/post/188700/).
+     */
 
     private suspend fun piSpigot(n: Int): String {
         return withContext(Dispatchers.IO){
