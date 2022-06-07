@@ -17,8 +17,8 @@ class PiFragment : Fragment() {
     private var counter = 0
     private var running = true
 
-    private var viewModelJob = Job()
-    private val ioScope = CoroutineScope(Dispatchers.Main + viewModelJob)
+    private var job = Job()
+    private val ioScope = CoroutineScope(Dispatchers.Main + job)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
